@@ -24,7 +24,7 @@ SamiQ is an enterprise-grade **Industrial AI Workspace & RAG Knowledge Engine** 
 - **Inspector Side-Drawer**: Click any graph node to inspect metadata, uploader info, equipment tags, and linked manuals.
 
 ### ⚙️ 3. Asset Management & Telemetry Alarms
-- **Equipment Inventory**: Track centrifugals pumps (P-101), steam turbines (T-202), compressors (C-303), heat exchangers (E-404), and control valves (V-505).
+- **Equipment Inventory**: Track centrifugal pumps (P-101), steam turbines (T-202), compressors (C-303), heat exchangers (E-404), and control valves (V-505).
 - **Live Anomaly Feed & Health Metrics**: Real-time status indicators, alarm thresholds (e.g., *Bearing Temp > 80°C*), and maintenance history.
 
 ### 👥 4. Enterprise Member Management & RBAC
@@ -34,7 +34,7 @@ SamiQ is an enterprise-grade **Industrial AI Workspace & RAG Knowledge Engine** 
 
 ### 🔒 5. Workspace Administration & Audit Trails
 - **Audit Logging**: Comprehensive event tracking for document ingestion, deletions, Copilot queries, and member management.
-- **Global Toast Notification System**: Animated, non-intrusive light blue popups for real-time operation confirmation.
+- **Global Toast Notification System**: Animated, non-intrusive sky blue popups for real-time operation confirmation.
 - **Theme Preferences**: Seamless Light and Dark mode switching across all views.
 
 ---
@@ -44,23 +44,23 @@ SamiQ is an enterprise-grade **Industrial AI Workspace & RAG Knowledge Engine** 
 ### Frontend
 - **Framework**: React 18 with Vite
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS with custom HSL industrial design system
+- **Styling**: Tailwind CSS with custom industrial design tokens
 - **Visualization**: D3.js (Force-Directed Graphing)
 - **Icons**: Lucide React
 
 ### Backend
 - **Runtime**: Node.js & Express
 - **Language**: TypeScript
-- **Database Layer**: MongoDB / Mongoose (with automated local JSON DB fallback for local offline execution)
+- **Database Layer**: MongoDB / Mongoose (with automated local JSON DB fallback)
 - **AI Integration**: Google Generative AI (Gemini / RAG Embeddings)
 - **File Parsing**: `pdf-parse`, Multer, XML DOM Parser for DOCX
 
 ---
 
-## 📁 Repository Structure
+## 📁 Current Repository Structure
 
 ```
-ai-industry/
+AI-Industry/
 ├── backend/
 │   ├── src/
 │   │   ├── controllers/      # API Controllers (auth, docs, assets, copilot, graph, members)
@@ -70,12 +70,11 @@ ai-industry/
 │   │   ├── services/         # Document Parser & Semantic RAG Search Services
 │   │   ├── utils/            # DB Connection & Helper Utilities
 │   │   └── server.ts         # Express Application Entry Point
-│   ├── db.json               # Local JSON Database (Fallback mode)
-│   ├── uploads/              # Ingested Document File Storage
+│   ├── .env.example          # Backend Environment Template
 │   ├── package.json
 │   └── tsconfig.json
 ├── frontend/
-│   ├── public/               # Favicons, Logos & Asset Media
+│   ├── public/               # Favicons, Logos, Avatars & Landing Page Assets
 │   ├── src/
 │   │   ├── components/       # Reusable UI (Sidebar, Toast, Modals)
 │   │   ├── context/          # React Context (AuthContext, ThemeContext, ToastContext)
@@ -84,15 +83,17 @@ ai-industry/
 │   │   ├── App.tsx           # Router & App Layout Configuration
 │   │   ├── main.tsx          # React Root Entry Point
 │   │   └── index.css         # Global Styles & Animations
+│   ├── .env.example          # Frontend Environment Template
 │   ├── package.json
+│   ├── tsconfig.json
 │   └── vite.config.ts
-├── dummy_test_files/         # Multi-page industrial test documents (SOPs, Schematics, Reports)
-└── README.md
+├── .gitignore                # Root Git Ignore Configuration
+└── README.md                 # Project Documentation
 ```
 
 ---
 
-## 🚀 Quick Start & Installation
+## 🚀 Quick Start & Setup Guide
 
 ### Prerequisites
 - **Node.js**: v18.0.0 or higher
@@ -104,55 +105,52 @@ git clone https://github.com/Akshikmt/AI-Industry.git
 cd AI-Industry
 ```
 
-### 2. Backend Setup
+### 2. Backend Configuration & Launch
 ```bash
 cd backend
 npm install
 ```
 
-Create a `.env` file in `backend/`:
-```env
-PORT=5000
-JWT_SECRET=your_jwt_secret_key_here
-MONGODB_URI=mongodb://localhost:27017/samiq
-GEMINI_API_KEY=your_gemini_api_key
+Copy environment template:
+```bash
+cp .env.example .env
 ```
+*(Configure `PORT`, `JWT_SECRET`, `MONGODB_URI`, and `GEMINI_API_KEY` in `.env`)*
 
-Run Backend Server:
+Start Backend Server:
 ```bash
 npm run dev
 ```
 *(Backend runs on `http://localhost:5000`)*
 
-### 3. Frontend Setup
+### 3. Frontend Configuration & Launch
 Open a new terminal window:
 ```bash
 cd frontend
 npm install
+```
+
+Copy environment template:
+```bash
+cp .env.example .env
+```
+
+Start Development Server:
+```bash
 npm run dev
 ```
 *(Frontend runs on `http://localhost:5173`)*
 
 ---
 
-## 🔒 Security & Compliance
+## 🔒 Security & Best Practices
 
-- **Authentication**: JWT token validation stored securely in browser session.
-- **Route Guards**: Frontend and backend protection for Admin-only operations.
-- **Audit Compliance**: Immutable log records for document deletions, workspace member updates, and telemetry access.
-
----
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+- **Zero Secret Exposure**: `.env` files, `node_modules/`, and temporary upload binaries are strictly ignored via `.gitignore`.
+- **JWT Session Security**: Secure authorization headers for restricted API endpoints.
+- **Enterprise Audit Trail**: Immutable action logging for compliance and security review.
 
 ---
 
 ## 📄 License
 
-Distributed under the **MIT License**. See `LICENSE` for more information.
+Distributed under the **MIT License**.
