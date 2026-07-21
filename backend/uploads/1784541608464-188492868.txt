@@ -1,0 +1,23 @@
+========================================================================
+FIELD INCIDENT REPORT: HIGH PRESSURE STEAM TURBINE DEVIATION REPORT
+========================================================================
+Equipment Tag: T-202
+Target System: Main Steam Generation Loop
+Department: Maintenance
+
+1. INCIDENT DETAILS
+- Date Recorded: 2026-07-12
+- Incident Class: Critical Alarm - Sensor Deviation
+- Primary Investigator: Operator J. Miller
+
+2. SUMMARY OF SPECIFICATIONS DEVIATION
+During the scheduled emergency shutdown test on 2026-07-12, turbine deceleration curves registered a severe transient vibration spike. 
+Rotor vibration levels peaked at 3.4 mm/s, exceeding the operational safety limit of 2.0 mm/s.
+
+3. PROBABLE CAUSE ANALYSIS
+A telemetry sweep indicates throttle valve misalignment. The steam governor valves are displaying asymmetric closure rates on deceleration. This throttling asymmetry triggers steam flow imbalances, causing mechanical rotor vibrations.
+
+4. REMEDIATION INSTRUCTIONS
+- REALIGN governor valve linkages and calibrate alignment sensors.
+- RUN a static control loop check on the throttle stroke curves prior to restarting the main steam loop.
+- INSPECT rotor blades for friction scratching if next start test vibration exceeds 1.8 mm/s.

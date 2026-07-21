@@ -1,0 +1,53 @@
+================================================================================
+STANDARD OPERATING PROCEDURE: STEAM TURBINE T-202 OVERHAUL & CALIBRATION
+Document ID: SOP-505-REV3 | Classification: Restricted Operational Document
+Target Equipment: High-Pressure Steam Turbine (Tag: T-202) | Department: Maintenance
+================================================================================
+
+--- PAGE 1 OF 2 ---
+
+1. OPERATIONAL OVERVIEW & SAFETY MANDATES
+--------------------------------------------------------------------------------
+This document establishes standard operating protocols for routine calibration, 
+mechanical governor inspection, and bearing vibration alignment for High Pressure
+Steam Turbine T-202.
+
+SAFETY REQUIREMENTS:
+- Lockout / Tagout (LOTO) protocol LOTO-881 must be strictly executed before access.
+- All high-pressure steam lines must be isolated and depressurized to 0 PSIG.
+- Personal Protective Equipment (PPE): Thermal protective suit, safety boots, face shield.
+
+EQUIPMENT DESIGN SPECIFICATIONS (TAG: T-202):
+- Max Operating Speed: 3,600 RPM
+- Critical Temperature Limit: 85.0°C (Warning Trigger at 78.0°C)
+- Vibration Threshold Limit: 2.5 mm/s RMS (Shutdown Alarm at 3.8 mm/s)
+- Lube Oil Specification: ISO VG 46 Turbine Oil (Capacity: 120 Liters)
+
+2. PRE-MAINTENANCE CHECKLIST & INSTRUMENT DIAGNOSTICS
+--------------------------------------------------------------------------------
+Step 1.1: Verify oil sump level indicator on T-202 sight glass.
+Step 1.2: Check differential pressure across secondary lube oil filters (Max Delta P = 12 PSI).
+Step 1.3: Calibrate proximity probes PT-202A and PT-202B on main rotor bearing shaft.
+Step 1.4: Confirm emergency trip throttle valve solenoid responds within 250 milliseconds.
+
+
+--- PAGE 2 OF 2 ---
+
+3. ROTOR DECELERATION & GOVERNOR VALVE CALIBRATION PROCEDURE
+--------------------------------------------------------------------------------
+During deceleration phase tests, vibration harmonic spikes must be recorded.
+
+DETAILED STEP-BY-STEP CALIBRATION:
+Step 2.1: Disengage main generator breaker to isolate turbine T-202 from electrical grid.
+Step 2.2: Gradually close main steam inlet throttle valve at a rate of 5% per minute.
+Step 2.3: Monitor real-time vibration telemetry on AI Copilot dashboard.
+         If vibration exceeds 3.2 mm/s RMS, abort test and execute manual trip switch.
+Step 2.4: Inspect governor linkage pins for mechanical wear or corrosion.
+Step 2.5: Replace main housing oil seal rings with Part # T202-SEAL-KIT.
+
+4. POST-MAINTENANCE SIGN-OFF & OPERATIONAL RE-START
+--------------------------------------------------------------------------------
+- Inspector Name: Lead Maintenance Engineer (admin@samiq.ai)
+- Completion Criteria: Zero active thermal alarms, vibration < 1.8 mm/s at 3,600 RPM.
+- Authorized Sign-off: Chief Operations Manager
+================================================================================

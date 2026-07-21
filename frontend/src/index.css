@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Light & Professional Base Colors */
+  --color-dark-bg: #F8FAFC;       /* Soft cool slate background */
+  --color-dark-card: #FFFFFF;     /* Crisp white cards */
+  --color-dark-border: #E2E8F0;   /* Light gray borders */
+  --color-dark-text: #0F172A;     /* Dark charcoal text for high contrast readability */
+  --color-dark-muted: #64748B;    /* Slate gray muted text */
+  
+  /* Map standard white to dark text so headings using text-white automatically render dark */
+  --color-white: #0F172A;
+  
+  /* Vibrant Corporate Accent Colors */
+  --color-accent-teal: #1e4e7c;       /* Industrial corporate blue */
+  --color-accent-tealHover: #153a5c;  /* Hover state corporate blue */
+  --color-accent-blue: #2b669a;       /* Lighter accent corporate blue */
+  --color-accent-amber: #D97706;      /* Safety warning amber */
+  --color-accent-rose: #E11D48;       /* Critical rose red */
+
+  --font-sans: 'Inter', 'Outfit', sans-serif;
+  
+  /* Premium Soft Shadow Glows */
+  --shadow-glow-teal: 0 4px 20px rgba(30, 78, 124, 0.08);
+  --shadow-glow-teal-strong: 0 8px 30px rgba(30, 78, 124, 0.14);
+}
+
+/* Force crisp pure white text and icons on solid blue/teal buttons and active step pills */
+button.bg-accent-teal,
+button.bg-accent-blue,
+button.bg-emerald-500,
+button[class*="from-accent-teal"],
+div.bg-accent-teal,
+div.bg-accent-blue,
+div.bg-emerald-500,
+div[class*="from-accent-teal"] {
+  color: #ffffff !important;
+}
+
+button.bg-accent-teal *,
+button.bg-accent-blue *,
+button.bg-emerald-500 *,
+button[class*="from-accent-teal"] *,
+div.bg-accent-teal *,
+div.bg-accent-blue *,
+div.bg-emerald-500 *,
+div[class*="from-accent-teal"] * {
+  color: #ffffff !important;
+}
+
+/* Dark theme variables override */
+.dark {
+  --color-dark-bg: #0B0F19;       /* Deep slate-blue/black */
+  --color-dark-card: #151D30;     /* Rich dark card background */
+  --color-dark-border: #222F4C;   /* Dark navy border */
+  --color-dark-text: #F8FAFC;     /* Light charcoal text for contrast */
+  --color-dark-muted: #94A3B8;    /* Muted gray text */
+  --color-white: #FFFFFF;         /* White text when dark mode is enabled */
+  --color-accent-teal: #0D9488;   /* Bright teal */
+  --color-accent-tealHover: #0F766E; /* Hover bright teal */
+  --color-accent-blue: #3B82F6;   /* Bright accent blue */
+  --color-accent-amber: #F59E0B;  /* Vibrant safety amber */
+  --color-accent-rose: #F43F5E;   /* Bright critical rose red */
+
+  --shadow-glow-teal: 0 4px 20px rgba(13, 148, 136, 0.12);
+  --shadow-glow-teal-strong: 0 8px 30px rgba(13, 148, 136, 0.22);
+}
+
+.dark body {
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(13, 148, 136, 0.05) 0px, transparent 40%),
+    radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.04) 0px, transparent 40%);
+}
+
+.dark .glassmorphism {
+  background-color: rgba(21, 29, 48, 0.75);
+  border: 1px solid rgba(34, 47, 76, 0.6);
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.35);
+}
+
+/* Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--color-dark-bg);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark-border);
+  border-radius: 9999px;
+  transition: background-color 0.2s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(13, 148, 136, 0.4);
+}
+
+/* Page transitions keyframes */
+@keyframes pageSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-dark-bg);
+  color: var(--color-dark-text);
+  font-family: var(--font-sans);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(30, 78, 124, 0.03) 0px, transparent 40%),
+    radial-gradient(at 100% 100%, rgba(37, 99, 235, 0.02) 0px, transparent 40%);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth button click active feedback */
+button, a {
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s ease, border-color 0.15s ease, shadow 0.15s ease;
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Apply global page entrance animation to dashboard layout main container */
+main, .animate-slide-in {
+  animation: pageSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Premium Light Glassmorphism Cards with Lift Animations */
+.glassmorphism {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 18px -4px rgba(15, 23, 42, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stat-card-hover:hover {
+  transform: translateY(-2.5px);
+  border-color: rgba(30, 78, 124, 0.35);
+  box-shadow: 0 12px 28px -6px rgba(30, 78, 124, 0.09);
+}
+
+/* Dragging state override */
+svg .cursor-pointer:active {
+  cursor: grabbing !important;
+}
+
+/* Premium Floating animation for Hero Illustration */
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+}
+
+/* Premium reflective shining sweep for glass cards */
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 200%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+.glass-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+  transform: skewX(-25deg);
+  animation: shine 5s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Bar chart rise growth animation */
+@keyframes barGrowUp {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.animate-bar-grow {
+  animation: barGrowUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: bottom;
+}

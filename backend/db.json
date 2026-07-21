@@ -1,0 +1,69 @@
+{
+  "users": [
+    {
+      "id": "1zkm7b9pg",
+      "name": "Industrial Administrator",
+      "email": "admin@samiq.ai",
+      "password": "$2a$10$0lC8yX06ksVKy2oI86j.aeulnHyIZB5bgQkYp.Jvtm3rrmS4i8PB2",
+      "role": "admin",
+      "createdAt": "2026-07-15T06:15:14.016Z"
+    },
+    {
+      "id": "9uvwv58sp",
+      "name": "Operations Engineer",
+      "email": "employee@samiq.ai",
+      "password": "$2a$10$jZhbGv7ndxIPNoJOBjIZ3OHkO7oYnSC2OHWyVMNIZSLYZRaCxsEse",
+      "role": "employee",
+      "createdAt": "2026-07-15T06:15:14.019Z"
+    }
+  ],
+  "assets": [
+    {
+      "id": "9k70q8jpl",
+      "assetName": "Centrifugal Water Pump",
+      "equipmentTag": "P-101",
+      "department": "Operations",
+      "createdAt": "2026-07-15T06:15:14.022Z"
+    },
+    {
+      "id": "rq94bqbsz",
+      "assetName": "High Pressure Steam Turbine",
+      "equipmentTag": "T-202",
+      "department": "Maintenance",
+      "createdAt": "2026-07-15T06:15:14.024Z"
+    },
+    {
+      "id": "91pu2daup",
+      "assetName": "Reciprocating Air Compressor",
+      "equipmentTag": "C-303",
+      "department": "Safety",
+      "createdAt": "2026-07-15T06:15:14.025Z"
+    },
+    {
+      "id": "vr7e4u4rl",
+      "assetName": "Shell and Tube Heat Exchanger",
+      "equipmentTag": "E-404",
+      "department": "Operations",
+      "createdAt": "2026-07-15T06:15:14.026Z"
+    },
+    {
+      "id": "zktkhgvh4",
+      "assetName": "Emergency Shutdown Control Valve",
+      "equipmentTag": "V-505",
+      "department": "Safety",
+      "createdAt": "2026-07-15T06:15:14.028Z"
+    }
+  ],
+  "logs": [
+    {
+      "id": "dkuuh10od",
+      "userId": "1zkm7b9pg",
+      "action": "LOGIN",
+      "metadata": {
+        "email": "admin@samiq.ai",
+        "role": "admin"
+      },
+      "timestamp": "2026-07-15T07:21:53.700Z"
+    }
+  ]
+}

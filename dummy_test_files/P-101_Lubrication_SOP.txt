@@ -1,0 +1,23 @@
+========================================================================
+STANDARD OPERATING PROCEDURE: CENTRIFUGAL WATER PUMP LUBRICATION (SOP-441)
+========================================================================
+Equipment Tag: P-101
+Target System: Operations Coolant Loop
+Department: Operations
+
+1. TECHNICAL SPECIFICATIONS
+- Bearing Type: Double-shielded deep groove ball bearing
+- Lubricant Model: Mobilith SHC 220 Synthetic Grease
+- Normal Operating Temperature: 45°C to 65°C
+- Safety Alarm Limit (Thermal): 75°C
+- Emergency Shutdown Limit (Thermal): 85°C
+
+2. MAINTENANCE AND RE-GREASING INTERVALS
+- Lubrication interval cycle: Every 150 operating hours.
+- A weekly inspection log must be updated in the physical operations ledger.
+- If bearing temperature sensor readings exceed 78°C, technicians must execute a lubricant viscosity test and schedule immediate grease replacement.
+
+3. SEAL MAINTENANCE PROTOCOL
+- Check mechanical seals daily for leakage.
+- Normal leakage allowance: Less than 3 drops per minute.
+- In the event of active leakage (exceeding 10 drops per minute), immediately deploy Seal Replacement Kit #P101-SK and notify the lead shift engineer.
