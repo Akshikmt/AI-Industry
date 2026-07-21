@@ -1,4 +1,4 @@
-# 🏭 SamiQ — Industrial AI Workspace & Knowledge Engine
+# 🏢 SamiQ — Universal AI Workspace & Knowledge Engine
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React_18-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -7,35 +7,35 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![D3.js](https://img.shields.io/badge/D3.js-F9A03C?style=for-the-badge&logo=d3.js&logoColor=white)
 
-SamiQ is an enterprise-grade **Industrial AI Workspace & RAG Knowledge Engine** designed for plant engineering, maintenance teams, safety compliance officers, and industrial operators. It unifies technical manuals, standard operating procedures (SOPs), equipment schematics, and live asset telemetry into an interactive, AI-assisted platform.
+SamiQ is an enterprise-grade **Universal AI Workspace & RAG Knowledge Engine** adaptable to any industry (manufacturing, energy, healthcare, IT, logistics, financial services, construction, and corporate enterprises). It unifies organizational documents, standard operating procedures (SOPs), policy manuals, technical schematics, and asset/system inventories into an interactive, AI-assisted platform.
 
 ---
 
 ## 🌟 Key Features
 
 ### 🧠 1. RAG-Powered AI Copilot & Smart Search
-- **Retrieval-Augmented Generation (RAG)**: Ask technical troubleshooting questions (e.g., *"What is the Governor valve calibration procedure for Turbine T-202?"*) and receive contextual answers powered by vector document retrieval.
-- **Multi-Format Text Ingestion**: Parses digital PDFs, scanned documents, Word files (`.docx`), plain text manuals (`.txt`), and schematics (`.png`).
-- **Interactive Citation Drawer**: Each answer includes direct file URL citations, section links, and exact excerpt previews.
+- **Retrieval-Augmented Generation (RAG)**: Query any uploaded organization documents (e.g., standard operating procedures, compliance guidelines, policy manuals, technical documentation) and receive instant, contextual answers powered by vector document retrieval.
+- **Multi-Format Document Parsing**: Ingests digital PDFs, scanned documents, Word files (`.docx`), plain text files (`.txt`), and technical diagrams/images (`.png`, `.jpg`).
+- **Interactive Citation Drawer**: Every generated response includes direct document citations, section links, and exact excerpt previews.
 
-### 🕸️ 2. Dynamic Industrial Knowledge Graph
-- **Interactive D3 Force Network**: Visualizes relationships between plant departments (`Operations`, `Maintenance`, `Safety`), registered equipment assets, uploaded manuals, and user audit timelines.
-- **Physics Simulation & Filtering**: Built with collision bounds and drag constraints to prevent node overlap. Filter by entity layers (`Assets`, `Documents`, `Members`, `Logs`).
-- **Inspector Side-Drawer**: Click any graph node to inspect metadata, uploader info, equipment tags, and linked manuals.
+### 🕸️ 2. Dynamic Organizational Knowledge Graph
+- **Interactive D3 Force Network**: Visualizes relationships between organizational departments, registered assets/systems, uploaded documents, and user activity timelines.
+- **Physics Simulation & Layer Filtering**: Built with collision bounds and drag constraints to prevent node overlap. Filter by entity layers (`Assets/Systems`, `Documents`, `Members`, `Logs`).
+- **Inspector Side-Drawer**: Click any graph node to inspect metadata, uploader details, system tags, and linked documents.
 
-### ⚙️ 3. Asset Management & Telemetry Alarms
-- **Equipment Inventory**: Track centrifugal pumps (P-101), steam turbines (T-202), compressors (C-303), heat exchangers (E-404), and control valves (V-505).
-- **Live Anomaly Feed & Health Metrics**: Real-time status indicators, alarm thresholds (e.g., *Bearing Temp > 80°C*), and maintenance history.
+### ⚙️ 3. Asset & System Inventory Management
+- **Catalog Inventory**: Track organizational assets, equipment, machinery, hardware, or facility systems across departments.
+- **Status Indicators & Health Metrics**: Monitor asset operational states, maintenance history, and telemetry logs.
 
 ### 👥 4. Enterprise Member Management & RBAC
-- **Role-Based Access Control**: Separate privileges for **Workspace Administrators** and **Operators/Employees**.
-- **CSV Batch Import**: Bulk import workspace team members with interactive column mapping, validation, and error detection.
+- **Role-Based Access Control**: Granular access control for **Workspace Administrators** and **Team Members/Operators**.
+- **CSV Batch Import**: Bulk import organization team members with interactive column mapping, validation, and error detection.
 - **Profile Customization**: Precise profile avatar cropping with interactive zoom/pan controls.
 
 ### 🔒 5. Workspace Administration & Audit Trails
-- **Audit Logging**: Comprehensive event tracking for document ingestion, deletions, Copilot queries, and member management.
-- **Global Toast Notification System**: Animated, non-intrusive sky blue popups for real-time operation confirmation.
-- **Theme Preferences**: Seamless Light and Dark mode switching across all views.
+- **Audit Logging**: Immutable event tracking for document ingestion, deletions, Copilot queries, and member profile updates.
+- **Global Toast Notification System**: Animated, non-intrusive popups for real-time operation confirmation.
+- **Theme Preferences**: Seamless Light and Dark mode switching across all workspace views.
 
 ---
 
@@ -44,20 +44,20 @@ SamiQ is an enterprise-grade **Industrial AI Workspace & RAG Knowledge Engine** 
 ### Frontend
 - **Framework**: React 18 with Vite
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS with custom industrial design tokens
+- **Styling**: Tailwind CSS with custom theme design system
 - **Visualization**: D3.js (Force-Directed Graphing)
 - **Icons**: Lucide React
 
 ### Backend
 - **Runtime**: Node.js & Express
 - **Language**: TypeScript
-- **Database Layer**: MongoDB / Mongoose (with automated local JSON DB fallback)
+- **Database Layer**: MongoDB / Mongoose (with automated local JSON DB fallback for local offline execution)
 - **AI Integration**: Google Generative AI (Gemini / RAG Embeddings)
 - **File Parsing**: `pdf-parse`, Multer, XML DOM Parser for DOCX
 
 ---
 
-## 📁 Current Repository Structure
+## 📁 Repository Structure
 
 ```
 AI-Industry/
